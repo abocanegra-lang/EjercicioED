@@ -44,6 +44,8 @@
             
             <input type="button" value="Calcular suma" style="background-color: green;" onclick="calcularSuma()">
             <input type="button" value="Calcular resta" style="background-color: red;" onclick="calcularResta()">
+            <input type="button" value="Calcular multiplicacion" style="background-color: blue;" onclick="calcularMultiplicacion()">
+
         </form>
 
         <div id="resultado"></div>
@@ -86,6 +88,26 @@ function calcularResta() {
         document.getElementById("resultado").innerHTML = "ingrese dos números válidos.";
     }
 }
+
+function calcularMultiplicacion() {
+    // Obtener los valores de los campos de entrada
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+
+    // Verificar si ambos valores son números
+    if (!isNaN(num1) && !isNaN(num2)) {
+        // Calcular la multiplicacion
+        var multiplicacion = num1 * num2;
+
+        // Mostrar el resultado en el elemento con id "resultado"
+        document.getElementById("resultado").innerHTML = "El resultado de la multiplicacion es: " + multiplicacion;
+    } else {
+        // Mostrar un mensaje de error si los valores no son números
+        document.getElementById("resultado").innerHTML = "ingrese dos números válidos.";
+    }
+}
+
+
 
 
 
